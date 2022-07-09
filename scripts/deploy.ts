@@ -8,12 +8,14 @@ async function main() {
     ethers.utils.parseEther("10000")
   );
 
+  console.log("Token address:", token.address);
+
   try {
     console.log("Verifying Token...");
     await run("verify:verify", {
       address: token.address,
       contract: "contracts/Token.sol:Token",
-      constructorArguments: [token.address],
+      arguments: ["LP Token", "LP", ethers.utils.parseEther("10000")],
     });
   } catch (e: any) {
     console.error(e.message);
