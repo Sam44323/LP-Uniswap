@@ -2,6 +2,7 @@
   "name": "lp-uniswap",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.1",
+    "@openzeppelin/contracts": "^4.7.0",
     "hardhat": "^2.10.0"
   },
   "scripts": {
